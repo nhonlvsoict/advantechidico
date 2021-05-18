@@ -12,3 +12,6 @@
     text-transform: uppercase;
     color: #db0008 !important;
 }
+.modal-inner{
+    overflow: hidden !important;
+}
