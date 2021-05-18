@@ -1,6 +1,9 @@
 // Font Family
+@function safe-unquote($param) {
+	@return if(type-of($param) == string, safe-unquote($param), $param);
+  }
 @mixin font-family($elem) {
-	font-family: unquote(get-font-family($elem));
+	font-family: safe-unquote(get-font-family($elem));
 }
 
 // Font-size + Line-height + Kerning
